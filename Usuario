@@ -1,0 +1,32 @@
+#! / bin / sh
+
+
+# -------------------------------------------- #
+#       Jonathan Alberto Alas Gonzalez #
+# -------------------------------------------- #
+
+# Script con el paso a paso para crear grupos de usuario y agregar usuarios a este.
+# El primer paso es iniciar como usuario root
+# crearemos el grupo "Casa" con el siguiente comando.
+Casa de groupadd
+
+# Con el siguiente comando muestro el grupo.
+getent group Casa
+
+# Creamos el usuario "Ana".
+adduser Ana
+
+# Agregamos el usuario al grupo "Casa".
+adduser Ana Casa
+
+# Creamos el usuario "Jonathan".
+adduser Jonathan
+
+# Agregamos el usuario al grupo "Casa".
+adduser Jonathan Casa
+
+# Cambiamos el nombre del grupo "Casa", por el nombre "Familia".
+groupmod -n Familia Casa
+
+# Con el siguiente comando muestro el grupo.
+getent group Familia
